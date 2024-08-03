@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class=" bg-gray-200 mx-auto rounded max-w-xl shadow-red-900 h-72 mt-5">
+
+        <h1 class="text-center text-orange-500 font-semibold text-3xl mb-5">Get length of your Text</h1>
+        <label for="input" class="block m-auto text-center text-3xl "> enter text :  </label>
+        <input type="text" id="input" class=" p-2 border-black-700 rounded mt-4 text-center block m-auto" placeholder="enter text here">
+        <button id="btn" class=" p-2 block bg-green-100 rounded mt-4 m-auto"> Goo....</button>
+        <p id="result" class="block m-auto w-56 "></p>
+
+
+    </div>
+
+</body>
+</html>
+<script>
+
+
+function getlength() {
+    let input = document.getElementById('input').value ;
+    let length = input.split(' ').join('').length ;
+    let ans = document.getElementById('result') ;
+   ans.innerText= 'length without gap =>' + ' ' + length ;
+   ans.style.color = 'red' ;
+   ans.style.fontSize = '20px' ;
+   ans.style.fontWeight = 'bold' ;
+   ans.style.textAlign = 'center' ;
+   ans.style.padding = '10px' ;
+   ans.style.border = '1px solid gray' ;
+   ans.style.borderRadius = '40px' ;
+    ans.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.1) ';
+    ans.style.marginTop='10px' ;
+    
+}
+
+document.getElementById('btn').addEventListener('click' , getlength);
+
+
+</script>
